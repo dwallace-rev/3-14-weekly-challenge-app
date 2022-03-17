@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         justifyContent:"center",
     },
     listsPageContainer:{
-        flex:1,
+        flex:.8,
         flexDirection:"row",
         justifyContent:"center",
         marginTop:"5%",

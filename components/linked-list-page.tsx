@@ -7,10 +7,10 @@ import styles from "./styles";
 
 export default function LinkedListPage(){
 
-    const [intersect, setIntersect] = useState<any>(null);
-
     const A = new LinkedList();
     const B = new LinkedList();
+
+    const [intersect, setIntersect] = useState<any>(null);
 
     return(<View style={{flex:1}}>
 
@@ -18,6 +18,9 @@ export default function LinkedListPage(){
         <LinkedListView list={A} setIntersect={setIntersect}/>
         <LinkedListView list={B} setIntersect={setIntersect}/>
     </View>
+    <Text style={{textAlign:"center", color:"gray"}}>
+        Known bug: when intersection is successfully found, lists get cleared. Click "Clear list" to view accurate data.
+    </Text>
     <View style={styles.resultsContainer}>
         <Pressable style={styles.findIntersectButton}>
             <Text style={styles.findIntersectButtonText} onPress={()=>setIntersect(findIntersect(A, B))}>Find Intersection</Text>
