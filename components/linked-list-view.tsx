@@ -1,19 +1,21 @@
 import styles from "./styles";
 import { Button, FlatList, Pressable, Text, TextInput, View } from "react-native";
 import LinkedList from "../entities/linked-list";
-import { createRef, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 
 
-export default function LinkedListView(props:{list: LinkedList, setIntersect: Function}){
+export default function LinkedListView(props:{list: LinkedList, setIntersect: Function, refresh: any}){
 
-    const {list, setIntersect} = props;
+    const {list, setIntersect, refresh: clear} = props;
     const [listArray, setListArray] = useState(list.toArray());
     const [addItem, setAddItem] = useState("");
 
     function addToList(newNode: any){
-        list.addNode(newNode);
-        setListArray(list.toArray());
-        setAddItem("");
+        if (addItem !== "") {
+            list.addNode(newNode);
+            setListArray(list.toArray());
+            setAddItem("");
+        }
     }
 
     function clearList(){
@@ -21,6 +23,10 @@ export default function LinkedListView(props:{list: LinkedList, setIntersect: Fu
         setListArray(list.toArray());
         setIntersect(null);
     }
+
+    useEffect(()=>{
+        setListArray(list.toArray());
+    },[clear])
 
     return(<View style={styles.listContainer}>
     
