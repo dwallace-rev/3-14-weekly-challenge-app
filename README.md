@@ -1,5 +1,5 @@
 # 3-14-weekly-challenge-app
-
+If you want to just view my Linked List and Stack implementation alone, they are in the Entities directory.  
 # Installation Instructions
 This application is available for Android devices as an .apk file, the link is below.  
 [Expo link for .apk file](https://expo.dev/accounts/dwallace.rev/projects/3-14-weekly-challenge-app/builds/28e9f342-811c-4da6-be2b-e7ab7e1841d4)
