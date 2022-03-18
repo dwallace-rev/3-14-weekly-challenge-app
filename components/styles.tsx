@@ -12,10 +12,14 @@ const styles = StyleSheet.create({
         flex: .8,
         flexDirection: "row",
         justifyContent: "center",
-        marginTop: "5%",
     },
     listContainer: {
         flex: 1,
+    },
+    listTitle:{
+        fontSize:24,
+        fontWeight:"bold",
+        textAlign:"center"
     },
     listView: {
         flex: 1,

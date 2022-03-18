@@ -20,6 +20,7 @@ export default function LinkedListPage(){
     const [intersect, setIntersect] = useState<any>(null);
 
     return(<View style={{flex:1}}>
+        <Text style={styles.listTitle}>Linked List Intersection</Text>
 
     <View style={styles.listsPageContainer}>
         <LinkedListView list={A} setIntersect={setIntersect} refresh={refresh}/>

@@ -23,6 +23,9 @@ export default function StackPage(){
     function popOff(){
         try {
             stack.pop();
+            if(stack.getStack().length === 0) {
+                setMax(0);
+            }
             setRefresh({...refresh});
         } catch (error) {
             alert(error);
@@ -42,7 +45,7 @@ export default function StackPage(){
     },[refresh])
 
     return(<View style={{flex:1}}>
-        <Text style={{fontSize:30, fontWeight:"bold", textAlign:"center",}}>Interactive Stack</Text>
+        <Text style={{fontSize:24, fontWeight:"bold", textAlign:"center",}}>Interactive Stack</Text>
         <View style={{flex:1, flexDirection:"row"}}>
 
             <View style={{flex:1, height:"70%"}}>
@@ -58,7 +61,7 @@ export default function StackPage(){
                     <Text style={styles.addItemButtonText}>Get Max Value</Text>
                 </Pressable>
 
-                <Text style={{fontSize:18, fontWeight:"bold", marginTop:30, textAlign:"center"}}>Current Max Value: </Text>
+                <Text style={{fontSize:18, fontWeight:"bold", marginTop:30, textAlign:"center"}}>Max Value: </Text>
                 <Text style={{fontSize:28, color:"#4A4", fontWeight:"bold", textAlign:"center"}}>{max}</Text>
             </View>
             <View style={styles.stackView}>
