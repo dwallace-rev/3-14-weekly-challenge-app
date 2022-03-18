@@ -2,7 +2,7 @@
 
 # Installation Instructions
 This application is available for Android devices as an .apk file, the link is below.  
-[Expo link for .apk file](https://expo.dev/accounts/dwallace.rev/projects/3-14-weekly-challenge-app/builds/884cb246-ca70-453f-ad16-f4bbe4f2c44b)
+[Expo link for .apk file](https://expo.dev/accounts/dwallace.rev/projects/3-14-weekly-challenge-app/builds/28e9f342-811c-4da6-be2b-e7ab7e1841d4)
 
 Alternatively, to run this application using Expo, you must have Node.js installed. 
 
